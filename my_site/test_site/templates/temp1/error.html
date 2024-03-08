@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Minimalist Night Theme</title>
+    <link rel="stylesheet" href="{% static 'temp1/css/reg_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="error-message">
+            <p><strong>Error:</strong> {{ error_message }}</p>
+        </div>
+    </div>
+</body>
+</html>

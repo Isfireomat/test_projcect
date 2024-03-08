@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Minimalist Night Theme</title>
+    <link rel="stylesheet" href="{% static 'temp1/css/user_acc_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-picture">👾</div> <!-- Символ 👾 -->
+            <div class="profile-text">
+                <p><strong>Name:</strong> {{name}}</p>
+                <p><strong>Email:</strong> {{email}}</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <form id="logout-form" method="post">
+                <input type="hidden" name="logout" value="true">
+                <button type="submit" class="exit-button">Exit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

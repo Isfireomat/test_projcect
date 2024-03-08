@@ -1,0 +1,78 @@
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 400px;
+    text-align: center; /* Центрируем содержимое контейнера */
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container {
+    display: inline-block; /* Размещаем элементы в строчку */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #fff; /* Белый цвет фона */
+    border-radius: 50%;
+    font-size: 100px; /* Размер символа */
+    line-height: 150px; /* Центрирование символа */
+}
+.button-container {
+    text-align: center; /* Центрируем кнопку */
+    margin-top: 20px; /* Отступ сверху */
+}
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+.profile-text strong {
+    /* color: #8778da; Цвет текста внутри тега <strong> */
+    background: linear-gradient(to right, #c289e9, #8778da); /* Градиент от тёмно-фиолетового до #8778da */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #fff; /* Белый цвет фона */
+    border-radius: 50%;
+    font-size: 100px; /* Размер символа */
+    line-height: 150px; /* Центрирование символа */
+    margin-right: 20px; /* Отступ справа */
+}
+
+.profile-text {
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.exit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #757575;
+    border: none;
+    border-radius: 5px;
+    color: #d4d4d4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px; /* Размер текста кнопки */
+    font-weight: bold; /* Жирный текст */
+}
+
+.exit-button:hover {
+    background-color: #8778da;
+    color: #000000; /* Цвет текста кнопки при наведении */
+}
+

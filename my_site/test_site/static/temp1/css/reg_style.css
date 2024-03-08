@@ -1,0 +1,92 @@
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+}
+
+.registration-form {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Центрируем текст в форме */
+}
+
+.registration-form h1 {
+    background: linear-gradient(to right, #c289e9, #8778da); /* Градиент от тёмно-фиолетового до #8778da */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px; /* Увеличиваем расстояние до следующего элемента */
+    font-size: 32px; /* Увеличиваем размер текста заголовка */
+    font-weight: bold; /* Делаем текст жирным */
+}
+
+.registration-form label {
+    font-size: 16px; /* Увеличиваем размер текста на форме */
+    color: #a4b7c1; /* Фиолетовый цвет текста на форме */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: calc(100% - 20px); /* Ширина input соответствует ширине контейнера минус отступы */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #757575;
+    background-color: transparent;
+    color: #d4d4d4;
+    transition: border-bottom-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-bottom-color: #8778da;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Отступ слева для метки */
+    pointer-events: none;
+    color: #757575;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #a4b7c1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #757575;
+    border: none;
+    border-radius: 5px;
+    color: #d4d4d4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px; /* Устанавливаем размер текста кнопки */
+}
+
+button[type="submit"]:hover {
+    background-color: #8778da;
+    color: #000000;
+    font-weight: bold;
+}

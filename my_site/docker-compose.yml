@@ -1,0 +1,36 @@
+  version: '3.9'
+
+  services:
+    db:
+      image: postgres:15.6
+      container_name: testdb
+      volumes:
+        - ~/db_volume:/var/lib/postgresql/data
+      env_file:
+        - .env
+    
+    project:
+      image: test_site:test
+      container_name: test_site_django
+      build: 
+        dockerfile: Dockerfile
+        context: .
+      ports:
+        - "8000:8000"
+      environment:
+        POSTGRES_HOST: db
+      volumes:
+        - static_volume:/project/static
+      depends_on:
+        - db
+      env_file:
+        - .env
+      command: >
+        bash -c "python manage.py makemigrations && 
+                 python manage.py migrate && 
+                 gunicorn test_site.wsgi:application -c gunicorn_conf.py"
+    
+  volumes:
+    static_volume:
+    db_volume:
+      
